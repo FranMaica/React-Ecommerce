@@ -7,7 +7,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import LandingPage from './components/LandingPage.jsx';
-import RopaPage from './components/RopaPage.jsx';
+import ClothesPages from './components/ClothesPages';
+import HombreContainer from "./components/HombreContainer";
+import DeportivoContainer from './components/DeportivoContainer';
+import MujerContainer from './components/MujerContainer.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -16,19 +20,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/ropa-hombre",
-        element: <RopaPage tiporopa="hombre" />
+        element: <HombreContainer/>
       },
       {
         path: "/ropa-mujer",
-        element: <RopaPage tiporopa="mujer" />
+        element: <MujerContainer/>
       },
       {
         path: "/ropa-deportivo",
-        element: <RopaPage tiporopa="deportivo" />
+        element: <DeportivoContainer/>
       },
       {
         path: "/home",
-        element: <LandingPage />
+        element: <LandingPage/>
       },
     ]
   },
