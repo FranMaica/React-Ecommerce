@@ -11,10 +11,14 @@ export default function HombreContainer() {
 
     return (
         <>
-            <section style={{ display: "flex", gap: 10 }}>
+            <section>
+                <div className="row">
                 {products.map((product) => (
+                    <div className="col">
                     <ProductCard key={product.id} product={product} />
+                    </div>
                 ))}
+                </div>
             </section>
         </>
     );
